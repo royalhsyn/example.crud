@@ -9,5 +9,5 @@ public interface UserServiceInter {
     User creat(User user);
     void delete(Long id);
     List<User> getAll(User user);
-     User getById(User user);
+     User getById(Long id,User user);
 }

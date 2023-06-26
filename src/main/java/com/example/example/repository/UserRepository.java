@@ -58,4 +58,13 @@ public class UserRepository {
 
         ));
     }
+    public User getById(Long id,User user){
+        String sql="select * from users where id=?";
+        return template.queryForObject(sql,new Object[]{id}, (rs,rownum) -> new User(
+                rs.getLong(1),
+                rs.getString(2),
+                rs.getString(3),
+                rs.getInt(4)
+        ));
+    }
 }

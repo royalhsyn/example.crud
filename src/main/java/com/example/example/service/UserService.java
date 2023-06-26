@@ -35,7 +35,7 @@ public class UserService implements UserServiceInter{
     }
 
     @Override
-    public User getById(User user) {
-        return null;
+    public User getById(Long id,User user) {
+        return repository.getById(id, user);
     }
 }

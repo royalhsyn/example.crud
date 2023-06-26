@@ -16,8 +16,8 @@ public class UserController {
     private UserServiceInter service;
 
     @GetMapping("/{id}")
-    public User getById(@PathVariable(value = "id") @RequestBody User user){
-        return service.getById(user);
+    public User getById(@PathVariable(value = "id") Long id, @RequestBody User user){
+        return service.getById(id,user);
     }
     @GetMapping()
     public List<User> getAll(@RequestBody User user){
