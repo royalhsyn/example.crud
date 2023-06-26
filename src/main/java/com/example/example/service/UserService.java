@@ -31,7 +31,7 @@ public class UserService implements UserServiceInter{
 
     @Override
     public List<User> getAll(User user) {
-        return null;
+        return repository.getAll(user);
     }
 
     @Override
